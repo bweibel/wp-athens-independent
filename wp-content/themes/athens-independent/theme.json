@@ -141,7 +141,7 @@
 				{
 					"name": "Brand Accent",
 					"slug": "primary-accent",
-					"color": "#fde8f1"
+					"color": "#6bcfe2"
 				},
 				{
 					"name": "Brand Alt",
@@ -151,7 +151,12 @@
 				{
 					"name": "Brand Alt Accent",
 					"slug": "primary-alt-accent",
-					"color": "#6b7a1b"
+					"color": "#9CC46E"
+				},
+				{
+					"name": "Brand Tertiary",
+					"slug": "brand-tertiary",
+					"color": "#9691cf"
 				},
 				{
 					"name": "Contrast",
@@ -328,7 +333,7 @@
 							"fontFamily": "Kumbh Sans",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": [ "file:./assets/fonts/kumbh-sans/KumbhSans-VariableFont_wght.woff2"]
+							"src": [ "file:./assets/fonts/kumbh-sans/KumbhSans-VariableFont_YOPQ,wght.ttf"]
 						}
 					]
 				},

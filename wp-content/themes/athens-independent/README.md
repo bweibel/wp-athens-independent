@@ -45,9 +45,10 @@ Configured in `theme.json` per the ACI brand guide:
 | Name | Slug | Hex |
 |------|------|-----|
 | Brand (Pink) | `primary` | `#F48EAA` |
-| Brand Accent | `primary-accent` | `#fde8f1` |
+| Brand Accent | `primary-accent` | `#6bcfe2` |
 | Brand Alt (Yellow-Green) | `primary-alt` | `#E6EA9B` |
-| Brand Alt Accent | `primary-alt-accent` | `#6b7a1b` |
+| Brand Alt Accent | `primary-alt-accent` | `#9CC46E` |
+| Brand Tertiary (Purple) | `brand-tertiary` | `#9691cf` |
 | Contrast (Near-Black) | `main` | `#231F20` |
 | Contrast Accent | `main-accent` | `#d4d4d4` |
 | Base (White) | `base` | `#ffffff` |
@@ -60,7 +61,7 @@ Configured in `theme.json` per the ACI brand guide:
 
 - **Primary Font**: Kumbh Sans (Regular, Medium, Bold, Black)
 - Available from [Google Fonts](https://fonts.google.com/specimen/Kumbh+Sans)
-- Font files should be placed in `assets/fonts/kumbh-sans/`
+- Font file: `assets/fonts/kumbh-sans/KumbhSans-VariableFont_YOPQ,wght.ttf`
 
 ## For Developers
 
