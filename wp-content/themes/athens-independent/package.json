@@ -1,0 +1,23 @@
+{
+	"name": "athens-independent",
+	"version": "1.0",
+	"description": "Custom block theme for the Athens Independent",
+	"scripts": {
+	  "translate:patterns": "node theme-utils.mjs escape-patterns --text-domain=athens-independent",
+	  "dev": "node theme-utils.mjs watch --text-domain=athens-independent"
+	},
+	"keywords": [
+	  "wordpress",
+	  "theme",
+	  "block-theme",
+	  "translation"
+	],
+	"author": "Ben Weibel",
+	"license": "GPL-2.0-or-later",
+	"dependencies": {
+	  "parse5-html-rewriting-stream": "^7.0.0",
+	  "fast-glob": "^3.3.2",
+	  "chokidar": "^3.5.3"
+	},
+	"type": "module"
+  }

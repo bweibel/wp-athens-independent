@@ -1,0 +1,46 @@
+/* Group
+--------------------------------------------- */
+
+.is-style-background-blur {
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+}
+
+/* Improvements for row group */
+@media (max-width: 781px) {
+	.athensindie-row-stack {
+		flex-direction: column;
+		align-items: flex-start !important;
+	}
+
+	.athensindie-row-stack > * {
+		flex-basis: 100% !important;
+	}
+
+	.athensindie-flex-start {
+		align-items: flex-start !important;
+	}
+
+	.athensindie-justify-start {
+		justify-content: flex-start !important;
+	}
+}
+
+.athensindie-row-stack > .wp-block-buttons,
+.athensindie-no-shrink {
+	flex-shrink: 0;
+}
+
+.wp-block-group.athensindie-sticky-top {
+	top: calc(20px + var(--wp-admin--admin-bar--position-offset, 0px))
+}
+
+/* Helper class to swap order on mobile */
+@media (max-width: 781px) {
+	.athensindie-swap-order {
+		flex-direction: column-reverse;
+	}
+	.athensindie-row-reverse {
+		flex-direction: row-reverse;
+	}
+}
