@@ -71,6 +71,6 @@ wp plugin list --status=active
 - Project: Athens Independent
 - Client: Athens Independent
 - Theme slug: athens-independent
-- Function prefix: athens-independent_
+- Function prefix: athensindie_
 - Key plugins: []
 - Known quirks: none

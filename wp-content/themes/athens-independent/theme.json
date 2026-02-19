@@ -136,57 +136,57 @@
 				{
 					"name": "Brand",
 					"slug": "primary",
-					"color": "#5344F4"
+					"color": "#F48EAA"
 				},
 				{
 					"name": "Brand Accent",
 					"slug": "primary-accent",
-					"color": "#e9e7ff"
+					"color": "#fde8f1"
 				},
 				{
 					"name": "Brand Alt",
 					"slug": "primary-alt",
-					"color": "#DEC9FF"
+					"color": "#E6EA9B"
 				},
 				{
 					"name": "Brand Alt Accent",
 					"slug": "primary-alt-accent",
-					"color": "#3d386b"
+					"color": "#6b7a1b"
 				},
 				{
 					"name": "Contrast",
 					"slug": "main",
-					"color": "#1E1E26"
+					"color": "#231F20"
 				},
 				{
 					"name": "Contrast Accent",
 					"slug": "main-accent",
-					"color": "#d4d4ec"
+					"color": "#d4d4d4"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "#fff"
+					"color": "#ffffff"
 				},
 				{
 					"name": "Base Accent",
 					"slug": "secondary",
-					"color": "#545473"
+					"color": "#5c5a5a"
 				},
 				{
 					"name": "Tint",
 					"slug": "tertiary",
-					"color": "#f8f7fc"
+					"color": "#F4F4F4"
 				},
 				{
 					"name": "Border Base",
 					"slug": "border-light",
-					"color": "#E3E3F0"
+					"color": "#e0e0e0"
 				},
 				{
 					"name": "Border Contrast",
 					"slug": "border-dark",
-					"color": "#4E4E60"
+					"color": "#4a4a4a"
 				}
 			],
 			"link": true
@@ -319,68 +319,16 @@
 			"writingMode": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "Mona Sans, sans-serif",
-					"name": "Mona Sans",
+					"fontFamily": "Kumbh Sans, sans-serif",
+					"name": "Kumbh Sans",
 					"slug": "primary",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
-							"fontFamily": "Mona Sans",
-							"fontStretch": "75% 125%",
+							"fontFamily": "Kumbh Sans",
 							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [ "file:./assets/fonts/mona-sans/Mona-Sans.woff2"]
-						}
-					]
-				},
-				{
-					"fontFamily": "Mona Sans Expanded, sans-serif",
-					"name": "Mona Sans Expanded",
-					"slug": "expanded",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Expanded",
-							"fontStretch": "125%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/mona-sans/Mona-Sans.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "Mona Sans Condensed, sans-serif",
-					"name": "Mona Sans Condensed",
-					"slug": "condensed",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Condensed",
-							"fontStretch": "94%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/mona-sans/Mona-Sans.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "Mona Sans Narrow, sans-serif",
-					"name": "Mona Sans Narrow",
-					"slug": "narrow",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Mona Sans Narrow",
-							"fontStretch": "75%",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": [
-								"file:./assets/fonts/mona-sans/Mona-Sans.woff2"
-							]
+							"fontWeight": "100 900",
+							"src": [ "file:./assets/fonts/kumbh-sans/KumbhSans-VariableFont_wght.woff2"]
 						}
 					]
 				},

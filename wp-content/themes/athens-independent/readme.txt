@@ -1,6 +1,6 @@
-=== Ollie WordPress Block Theme ===
-Contributors: mmcalister, patrickposner
-Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
+=== Athens Independent WordPress Block Theme ===
+Contributors: bweibel
+Tags: blog, news, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.2
@@ -10,7 +10,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block theme! Ollie features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with global styles. Ollie integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.olliewp.com ✶
+Athens Independent is a custom WordPress block theme for Athens County Independent, an independent local news organization serving Athens County, Ohio. Built on WordPress Full Site Editing, it features block patterns for editorial layouts, a fully-customizable design system, and the ACI brand palette. Locally owned, community-driven news.
 
 == Changelog ==
 
@@ -82,7 +82,7 @@ Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block them
 * Remove extra styles in /styles folder
 
 = 1.3.0 - 12/16/24 =
-* Refine color palette names to map better to their contextual use. Read more about the change here: https://olliewp.com/docs/color-palette/
+* Refine color palette names to map better to their contextual use.
 * Refine existing color palettes with updated colors and new color slot.
 * Refine pattern layouts with simpler markup where possible
 * Add new Agency color palette for upcoming Agency pattern collection.
@@ -150,7 +150,7 @@ Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block them
 = 1.1.0 - 10/14/23 =
 * Remove custom duotone limitation 
 * Improve patterns for use in child themes 
-* Remove unnecessary ollie slug from template part
+* Remove unnecessary slug from template part
 
 = 1.0.9 - 10/4/23 =
 * Update theme description to remove reference to onboarding wizard
@@ -160,7 +160,7 @@ Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block them
 * Update screenshot
 
 = 1.0.7 - 10/2/23 =
-* Remove Ollie onboarding wizard in favor of plugin implementation in the coming weeks
+* Remove onboarding wizard in favor of plugin implementation in the coming weeks
 
 = 1.0.6 - 9/27/23 =
 * Replace social icon links with placeholder links
@@ -193,14 +193,14 @@ Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block them
 
 = 1.0.0 - 8/16/23 =
 * Initial public release 
-* Add Ollie Dashboard and Setup Wizard (Appearance → Ollie)
+* Add Dashboard and Setup Wizard
 * Fix block spacing for WordPress 6.3 
 
 = 0.1.4 - 7/17/23 =
 * Remove home.html template in favor of traditional set up. Using home.html had benefits, but required users to employ workarounds to get the homepage and blog settings working as expected. Now, to create a homepage layout, choose any page, apply the No Title page template, and add one of the full page patterns found in the pattern modal.
 * Fix margin styles on paragraphs and lists for 6.3. 
 * Add a Blog page pattern.
-* Prepare theme for Ollie setup wizard. 
+* Prepare theme for setup wizard.
 
 = 0.1.3 - 5/19/23 =
 * Change Front Page template back to front-page.html for now. Still contemplating the best option here.
@@ -217,15 +217,15 @@ Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block them
 * Remove post type restriction from header and footer patterns
 * Add author profile box pattern
 * Remove unnecessary styles from style.css
-* Update Ollie Twitter URLs
+* Update Twitter URLs
 
 = 0.1.0 - 3/20/23 =
 * Initial beta release
 
 == Copyright ==
 
-Ollie Theme, (C) 2025 Mike McAlister
-Ollie is distributed under the terms of the GNU GPL.
+Athens Independent Theme, (C) 2026 Athens County Independent
+Athens Independent Theme is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
