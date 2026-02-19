@@ -1,0 +1,49 @@
+# WordPress core — track nothing except wp-content
+/*
+!/.gitignore
+!/.claude/
+!/wp-content/
+
+# wp-content — track only theme and plugins we own
+/wp-content/*
+!/wp-content/themes/
+!/wp-content/plugins/
+
+# Ignore bundled/default themes and plugins
+/wp-content/themes/twenty*/
+/wp-content/plugins/hello.php
+/wp-content/plugins/akismet/
+
+# Ignore uploads and generated content
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/ai1wm-backups/
+/wp-content/cache/
+/wp-content/backup*/
+
+# Sensitive config
+wp-config.php
+.env
+.env.*
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts (add exceptions below if committing compiled assets)
+# /wp-content/themes/athens-independent/dist/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+*.swp
+*.swo
