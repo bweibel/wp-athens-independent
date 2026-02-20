@@ -81,6 +81,9 @@ function register_block_styles() {
 		'core/video'        => array(
 			'media-boxed' => __( 'Boxed', 'athens-independent' ),
 		),
+		'core/pullquote'    => array(
+			'aci-big' => __( 'Big Pull Quote', 'athens-independent' ),
+		),
 	);
 
 	foreach ( $block_styles as $block => $styles ) {

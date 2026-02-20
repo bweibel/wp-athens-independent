@@ -2,131 +2,47 @@
 /**
  * Title: Footer Light
  * Slug: athens-independent/footer-light
- * Description: 
+ * Description: Athens Independent locally-owned footer
  * Categories: footer
- * Keywords: 
+ * Keywords: footer, local, news
  * Viewport Width: 1500
  * Block Types: core/template-part/footer
  * Post Types: wp_template
  * Inserter: true
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"margin":{"top":"0px"},"blockGap":"var:preset|spacing|large"},"elements":{"link":{"color":{"text":"var:preset|color|main"}}},"border":{"top":{"color":"var:preset|color|border-light","width":"1px"},"right":[],"bottom":[],"left":[]}},"backgroundColor":"base","textColor":"main","layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-main-color has-base-background-color has-text-color has-background has-link-color" style="border-top-color:var(--wp--preset--color--border-light);border-top-width:1px;margin-top:0px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:columns {"metadata":{"name":"Footer Columns"},"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}}} -->
-<div class="wp-block-columns alignwide"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:site-title {"level":0,"isLink":false,"style":{"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"textColor":"main"} /-->
+<!-- wp:group {"metadata":{"name":"Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"margin":{"top":"0px"},"blockGap":"var:preset|spacing|medium"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"backgroundColor":"main","textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-main-background-color has-base-color has-text-color has-background has-link-color" style="margin-top:0px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
 
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><?php esc_html_e( 'Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Athens Independent block theme. No coding skills required. Download for free today!', 'athens-independent' ); ?></p>
+<!-- wp:paragraph {"align":"center","textColor":"base","style":{"typography":{"fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase","fontSize":"clamp(0.65rem,1.2vw,0.8rem)"}}} -->
+<p class="has-text-align-center has-base-color has-text-color" style="font-weight:700;letter-spacing:0.2em;text-transform:uppercase;font-size:clamp(0.65rem,1.2vw,0.8rem)"><?php esc_html_e( 'Locally Owned, Community Driven News', 'athens-independent' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","iconBackgroundColor":"main","iconBackgroundColorValue":"#14111f","className":"is-style-default","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"left"}} -->
-<ul class="wp-block-social-links has-icon-color has-icon-background-color is-style-default"><!-- wp:social-link {"url":"#","service":"twitter"} /-->
-
-<!-- wp:social-link {"url":"#","service":"instagram"} /-->
-
-<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
+<!-- wp:social-links {"iconColor":"base","iconColorValue":"#ffffff","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+<ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"instagram"} /-->
 
 <!-- wp:social-link {"url":"#","service":"facebook"} /--></ul>
-<!-- /wp:social-links --></div>
-<!-- /wp:column -->
+<!-- /wp:social-links -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"metadata":{"name":"Nav Column"}} -->
-<div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Company', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p><?php esc_html_e( 'About', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Careers', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Brand Assets', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Contact', 'athens-independent' ); ?></p>
+<!-- wp:group {"metadata":{"name":"Support Badge"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"8px"},"border":{"radius":"8px"}},"backgroundColor":"primary","layout":{"type":"flex","justifyContent":"center","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group has-primary-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:paragraph {"align":"center","textColor":"base","style":{"typography":{"fontWeight":"800","letterSpacing":"0.1em","textTransform":"uppercase","fontSize":"clamp(0.75rem,1.5vw,0.95rem)"}}} -->
+<p class="has-text-align-center has-base-color has-text-color" style="font-weight:800;letter-spacing:0.1em;text-transform:uppercase;font-size:clamp(0.75rem,1.5vw,0.95rem)"><?php esc_html_e( 'Support Local News', 'athens-independent' ); ?></p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column -->
+<!-- /wp:group -->
 
-<!-- wp:column {"metadata":{"name":"Nav Column"}} -->
-<div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Resources', 'athens-independent' ); ?></p>
+<!-- wp:site-logo {"width":280} /-->
+
+<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}}} -->
+<p class="has-text-align-center has-small-font-size"><a href="#"><?php esc_html_e( 'Learn About Our Award Winning &amp; Locally Supported Journalism', 'athens-independent' ); ?></a></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p><?php esc_html_e( 'Blog', 'athens-independent' ); ?></p>
+<!-- wp:separator {"backgroundColor":"border-dark","className":"is-style-separator-thin"} -->
+<hr class="wp-block-separator has-text-color has-border-dark-color has-alpha-channel-opacity has-border-dark-background-color has-background is-style-separator-thin"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"align":"center","fontSize":"x-small","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}}} -->
+<p class="has-text-align-center has-x-small-font-size"><?php echo esc_html( '© ' . date( 'Y' ) ); ?> <?php esc_html_e( 'Athens County Independent · PO Box 123, Athens, OH 45701 · All rights reserved.', 'athens-independent' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Contact', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Support Docs', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Get Help', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"metadata":{"name":"Nav Column"}} -->
-<div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600"><?php esc_html_e( 'Product', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p><?php esc_html_e( 'Features', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Pricing', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Use Cases', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Demo', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->
-
-<!-- wp:group {"metadata":{"name":"Footer Subnav"},"align":"wide","style":{"spacing":{"padding":{"top":"40px"}},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary"} -->
-<div class="wp-block-group alignwide has-secondary-color has-text-color has-link-color" style="padding-top:40px"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><?php esc_html_e( '© 2025', 'athens-independent' ); ?><strong><?php esc_html_e( '·', 'athens-independent' ); ?></strong><?php esc_html_e( '&nbsp;Powered by WordPress and', 'athens-independent' ); ?><a href="https://athensindependent.com"><?php esc_html_e( 'Athens Independent', 'athens-independent' ); ?></a></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p><?php esc_html_e( 'Download', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Visit Athens Independent', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><?php esc_html_e( 'Visit Mike', 'athens-independent' ); ?></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group --></div>
+</div>
 <!-- /wp:group -->

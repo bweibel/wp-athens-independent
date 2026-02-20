@@ -200,3 +200,113 @@ header:has(>.is-position-sticky) {
 		position: static;
 	}
 }
+
+/* ACI — Header utility bar
+---------------------------------------------------------------------------- */
+
+.aci-header-utility-bar {
+	font-size: var(--wp--preset--font-size--x-small);
+	background-color: var(--wp--preset--color--tertiary);
+}
+
+.aci-header-utility-bar .wp-block-social-links .wp-block-social-link {
+	width: 18px;
+	height: 18px;
+}
+
+.aci-header-utility-bar .wp-block-navigation a {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-weight: 600;
+}
+
+/* ACI — Breaking news ticker bar
+---------------------------------------------------------------------------- */
+
+.aci-breaking-news {
+	overflow: hidden;
+}
+
+.aci-breaking-news p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+}
+
+/* ACI — Homepage category section READ MORE tab
+---------------------------------------------------------------------------- */
+
+.aci-read-more-tab {
+	height: 100%;
+	min-height: 120px;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	cursor: pointer;
+}
+
+.aci-read-more-tab p {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	margin: 0;
+}
+
+.aci-read-more-tab a {
+	color: var(--wp--preset--color--base) !important;
+	text-decoration: none;
+	display: block;
+}
+
+.aci-read-more-tab a:hover {
+	text-decoration: underline;
+}
+
+/* ACI — Pull quote: big style variation
+---------------------------------------------------------------------------- */
+
+.wp-block-pullquote.is-style-aci-big {
+	border-top: none;
+	border-left: 5px solid var(--wp--preset--color--primary);
+	border-right: none;
+	border-bottom: none;
+	padding-top: var(--wp--preset--spacing--small);
+	padding-bottom: var(--wp--preset--spacing--small);
+	padding-left: var(--wp--preset--spacing--medium);
+	padding-right: 0;
+	text-align: left;
+}
+
+.wp-block-pullquote.is-style-aci-big blockquote p {
+	font-size: clamp(1.25rem, 3vw, 1.75rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--wp--preset--color--main);
+}
+
+.wp-block-pullquote.is-style-aci-big blockquote cite {
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--secondary);
+	font-style: normal;
+}
+
+/* ACI — Homepage hero cover overlay
+---------------------------------------------------------------------------- */
+
+.wp-block-query .wp-block-cover {
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+/* ACI — 404 illustration placeholder
+---------------------------------------------------------------------------- */
+
+.aci-404-illustration img {
+	display: block;
+	margin: 0 auto;
+}
+
+.aci-404-illustration img[src=""] {
+	display: none;
+}
