@@ -299,6 +299,23 @@ header:has(>.is-position-sticky) {
 	overflow: hidden;
 }
 
+/* ACI — Homepage footer
+---------------------------------------------------------------------------- */
+.scoop-says {
+    max-width: 300px;
+    margin: 2rem auto;
+	position: relative;
+}
+
+.scoop-says::after {
+    content: url(assets/svg/speechbubble.svg);
+    position: absolute;
+    width: 160px;
+    height: 120px;
+    top: 80px;
+    right: -130px;
+}
+
 /* ACI — 404 illustration placeholder
 ---------------------------------------------------------------------------- */
 
