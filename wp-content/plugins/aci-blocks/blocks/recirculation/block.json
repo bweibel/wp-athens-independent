@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "athensindependent/recirculation",
+  "version": "1.0.0",
+  "title": "Recirculation",
+  "category": "text",
+  "icon": "share",
+  "description": "Links to a chosen story with thumbnail and title.",
+  "attributes": {
+    "postId": { "type": "number", "default": 0 }
+  },
+  "supports": { "html": false },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

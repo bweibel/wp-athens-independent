@@ -113,7 +113,11 @@ function enqueue_custom_block_styles() {
 
 		// Get the filename and core block name.
 		$filename   = basename( $file, '.css' );
-		$block_name = str_replace( 'core-', 'core/', $filename );
+		$block_name = str_replace(
+			array( 'core-', 'athensindependent-' ),
+			array( 'core/', 'athensindependent/' ),
+			$filename
+		);
 
 		wp_enqueue_block_style(
 			$block_name,

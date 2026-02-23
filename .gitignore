@@ -4,12 +4,14 @@
 !/.claude/
 !/wp-content/
 
-# wp-content — track only our theme
+# wp-content — track only our theme and first-party plugins
 /wp-content/*
 !/wp-content/themes/
+!/wp-content/plugins/
 
 # Ignore all plugins (third-party; add exceptions below for any custom plugins we create)
-/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/aci-blocks/
 
 # Ignore bundled/default themes
 /wp-content/themes/twenty*/
