@@ -4,15 +4,15 @@
 !/.claude/
 !/wp-content/
 
-# wp-content — track only theme and plugins we own
+# wp-content — track only our theme
 /wp-content/*
 !/wp-content/themes/
-!/wp-content/plugins/
 
-# Ignore bundled/default themes and plugins
+# Ignore all plugins (third-party; add exceptions below for any custom plugins we create)
+/wp-content/plugins/
+
+# Ignore bundled/default themes
 /wp-content/themes/twenty*/
-/wp-content/plugins/hello.php
-/wp-content/plugins/akismet/
 
 # Ignore uploads and generated content
 /wp-content/uploads/
@@ -47,4 +47,3 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
-wp-content/plugins/better-search-replace/
