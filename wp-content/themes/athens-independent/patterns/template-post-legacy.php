@@ -1,11 +1,10 @@
 <?php
 /**
- * Title: Post Centered
- * Slug: athens-independent/template-post-centered
- * Template Types: single
- * Description: Single post layout with two-column content and sidebar.
+ * Title: Post Legacy
+ * Slug: athens-independent/template-post-legacy
+ * Description: Legacy single post layout with two-column content and sidebar.
  * Categories: athens-independent/posts
- * Keywords: post, centered, sidebar
+ * Keywords: post, legacy, sidebar
  * Viewport Width: 1500
  * Inserter: false
  */

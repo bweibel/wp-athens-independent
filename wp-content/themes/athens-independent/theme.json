@@ -824,6 +824,13 @@
 	},
 	"customTemplates": [
 		{
+			"name": "single-legacy",
+			"title": "Single (Legacy)",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
 			"name": "page-no-title",
 			"title": "Page (Full Width, No Title)",
 			"postTypes": [
