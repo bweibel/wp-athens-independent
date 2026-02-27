@@ -28,11 +28,6 @@ html {
 	-webkit-font-smoothing: antialiased;
 }
 
-b,
-strong {
-	font-weight: var(--wp--custom--font-weight--semi-bold);
-}
-
 ol,
 ul {
 	padding: 0;
@@ -224,17 +219,30 @@ header:has(>.is-position-sticky) {
 
 .aci-breaking-news {
 	overflow: hidden;
+	background-color: var(--wp--preset--color--primary-alt);
+	padding-block: 1rem;
+	text-align: center;
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 800;
+	text-transform: uppercase;
 }
 
-.aci-breaking-news p {
+.aci-breaking-news a{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	margin: 0;
+	text-decoration: none;
+
 }
+
 
 /* ACI — Homepage category section READ MORE tab
 ---------------------------------------------------------------------------- */
+.home-feature__title {
+	background-color: var(--wp--preset--color--primary);
+}
+
 
 .aci-read-more-tab {
 	height: 100%;
