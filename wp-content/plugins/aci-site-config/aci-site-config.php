@@ -75,3 +75,82 @@ add_action( 'widgets_init', function () {
 add_action( 'wp_head', function () {
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
 }, 1 );
+
+// ---------------------------------------------------------------------------
+// Scoop Says CPT.
+// ---------------------------------------------------------------------------
+
+add_action( 'init', function () {
+	register_post_type( 'aci_scoop_says', array(
+		'labels' => array(
+			'name'               => __( 'Scoop Says', 'aci-site-config' ),
+			'singular_name'      => __( 'Scoop Says', 'aci-site-config' ),
+			'add_new_item'       => __( 'Add New Scoop Says', 'aci-site-config' ),
+			'edit_item'          => __( 'Edit Scoop Says', 'aci-site-config' ),
+			'new_item'           => __( 'New Scoop Says', 'aci-site-config' ),
+			'search_items'       => __( 'Search Scoop Says', 'aci-site-config' ),
+			'not_found'          => __( 'No entries found.', 'aci-site-config' ),
+			'not_found_in_trash' => __( 'No entries found in trash.', 'aci-site-config' ),
+			'menu_name'          => __( 'Scoop Says', 'aci-site-config' ),
+		),
+		'public'       => false,
+		'show_ui'      => true,
+		'show_in_menu' => true,
+		'show_in_rest' => true,
+		'supports'     => array( 'title' ),
+		'menu_icon'    => 'dashicons-megaphone',
+	) );
+} );
+
+// Meta box: enforce 30-character limit with a live counter.
+add_action( 'add_meta_boxes', function () {
+	add_meta_box(
+		'aci_scoop_says_limit',
+		__( 'Character Limit', 'aci-site-config' ),
+		'aci_site_config_scoop_says_meta_box',
+		'aci_scoop_says',
+		'normal',
+		'high'
+	);
+} );
+
+function aci_site_config_scoop_says_meta_box() {
+	?>
+	<p style="margin:0;">
+		<?php esc_html_e( 'The title above is the Scoop Says text. Maximum 30 characters.', 'aci-site-config' ); ?>
+		<br><span id="aci-scoop-counter" style="font-weight:600;"></span>
+	</p>
+	<script>
+	( function () {
+		var MAX  = 30;
+		var titleInput = document.getElementById( 'title' );
+		var counter    = document.getElementById( 'aci-scoop-counter' );
+		if ( ! titleInput || ! counter ) return;
+
+		function update() {
+			var len       = titleInput.value.length;
+			var remaining = MAX - len;
+			counter.textContent = remaining >= 0
+				? remaining + ' characters remaining'
+				: Math.abs( remaining ) + ' characters over limit';
+			counter.style.color = remaining < 0 ? '#d63638' : remaining <= 5 ? '#dba617' : '#1e8234';
+			if ( len > MAX ) {
+				titleInput.value = titleInput.value.slice( 0, MAX );
+				update();
+			}
+		}
+
+		titleInput.addEventListener( 'input', update );
+		update();
+	} )();
+	</script>
+	<?php
+}
+
+// Server-side: trim title to 30 characters on save.
+add_filter( 'wp_insert_post_data', function ( $data ) {
+	if ( 'aci_scoop_says' === $data['post_type'] && ! empty( $data['post_title'] ) ) {
+		$data['post_title'] = mb_substr( $data['post_title'], 0, 30 );
+	}
+	return $data;
+} );

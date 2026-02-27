@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "athensindependent/breaking-news",
+  "version": "1.0.0",
+  "title": "Breaking News",
+  "category": "text",
+  "icon": "megaphone",
+  "description": "Renders the active breaking news headline from the Breaking News CPT.",
+  "supports": { "html": false },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

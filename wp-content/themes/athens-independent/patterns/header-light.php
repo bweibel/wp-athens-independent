@@ -55,11 +55,7 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"metadata":{"name":"Breaking News Bar"},"align":"full","className":"aci-breaking-news","backgroundColor":"primary","style":{"spacing":{"padding":{"top":"8px","bottom":"8px","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull aci-breaking-news has-primary-background-color has-background" style="padding-top:8px;padding-right:var(--wp--preset--spacing--medium);padding-bottom:8px;padding-left:var(--wp--preset--spacing--medium)"><!-- wp:paragraph {"align":"center","textColor":"base","fontSize":"x-small","style":{"typography":{"fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"}}} -->
-<p class="has-text-align-center has-base-color has-text-color has-x-small-font-size" style="font-weight:700;letter-spacing:0.08em;text-transform:uppercase">/// BREAKING NEWS /// Stay informed with the latest local news from Athens County — updated daily. ///</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
+<!-- wp:athensindependent/breaking-news /-->
 
 </div>
 <!-- /wp:group -->
