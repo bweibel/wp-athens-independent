@@ -218,8 +218,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "740px",
-			"wideSize": "1260px"
+			"contentSize": "60rem",
+			"wideSize": "80rem"
 		},
 		"shadow": {
 			"defaultPresets": false,
@@ -785,7 +785,7 @@
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var:preset|font-size|small"
+					"fontSize": "var:preset|font-size|base"
 				}
 			},
 			"h6": {
@@ -796,7 +796,7 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|primary",
-					"fontWeight": "600",
+					"fontWeight": "900",
 					"lineHeight": "var:custom|line-height|body"
 				}
 			},
