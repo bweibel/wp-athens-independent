@@ -184,6 +184,10 @@ header:has(>.is-position-sticky) {
     z-index: 100;
 }
 
+.is-scrolling .aci-header-utility-bar {
+	display: none;
+}
+
 .is-scrolling .logo-bar {
 	grid-template-columns: 1fr 1fr;
 	padding-block: 0.5rem;
@@ -205,6 +209,9 @@ header:has(>.is-position-sticky) {
 	}
 }
 
+.sticky-sidebar {
+	top: 110px
+}
 
 /* Helper styles
 ---------------------------------------------------------------------------- */
