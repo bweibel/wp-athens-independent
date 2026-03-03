@@ -1,17 +1,41 @@
 /* Desktop Navigation
 --------------------------------------------- */
 
+.wp-block-navigation__container {
+	column-gap: 0;
+}
+
+.wp-block-navigation__responsive-container .wp-block-navigation-item__content {
+	padding: .75rem 1rem ;
+}
+
+.wp-block-navigation__responsive-container .wp-block-navigation-item__label,
+.wp-block-navigation__responsive-container .wp-block-navigation-item__label:hover {
+	font-weight: 800;
+	text-decoration: none;
+}
+
 .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-item > a,
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover {
-	text-decoration: underline;
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .has-child button:hover,
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .wp-block-navigation-item__content:hover  {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--main);
+	text-decoration: none;
+
+}
+
+.wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
+	padding-left: 0.75rem ;
+	padding-right: 1rem;
 }
 
 /* Drop nav */
 .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container {
+	background-color: var(--wp--preset--color--main);
+	color: var(--wp--preset--color--tertiary)
 	border: none !important;
 	font-size: var(--wp--preset--font-size--small);
 	line-height: var(--wp--custom--line-height--snug);
-	border-radius: 5px;
 	min-width: 225px !important;
 	margin-left: calc(var(--wp--preset--spacing--medium) * -1);
 	padding: 0;
@@ -43,7 +67,14 @@
 /* Add margin to sub menu icon */
 .wp-block-navigation__responsive-container:not(.is-menu-open) .has-child .wp-block-navigation__submenu-container .wp-block-navigation__submenu-icon {
 	margin-right: var(--wp--preset--spacing--small);
+	
 }
+
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+margin-left: -1em;
+}
+
+
 
 /* Drop nav link padding */
 .wp-block-navigation__responsive-container:not(.is-menu-open) :where(.wp-block-navigation__submenu-container) a,
@@ -56,6 +87,11 @@
 
 .wp-block-navigation__responsive-container.is-menu-open.has-modal-open {
 	padding: var(--wp--preset--spacing--medium);
+	margin-top: 0;
+}
+
+.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
+	margin-top: 0;
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {

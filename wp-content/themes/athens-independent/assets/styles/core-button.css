@@ -5,7 +5,7 @@
 	transform: translateY(0);
 	transition: transform .2s ease-in;
 	border-radius: 0;
-	font-weight: bold;
+	font-weight: 900;
 	font-size: 1rem;
 	text-transform: uppercase;
 }

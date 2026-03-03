@@ -1,13 +1,117 @@
+.wp-block-post-terms a {
+    margin-right: .25rem;
+}
+
+
 /* Categories
 --------------------------------------------- */
 
+/* ── Category color mapping ──────────────────────────────────────────────────
+   Pink    (--primary)           Opinion, columns, culture/arts
+   Teal    (--primary-accent)    Government, politics, elections, civic, news
+   Yellow  (--primary-alt)       Community, features, lifestyle, scoop
+   Green   (--primary-alt-accent) Environment, health, education, economy
+   Purple  (--brand-tertiary)    Courts, policing, entertainment, gallery
+   ───────────────────────────────────────────────────────────────────────── */
+
+   
+/* Pink — opinion & editorial */
+.wp-block-post-terms a[href*="/category/opinion/"],
+.wp-block-post-terms a[href*="/category/op-ed/"],
+.wp-block-post-terms a[href*="/category/letters-to-the-editor/"],
+.wp-block-post-terms a[href*="/category/letter-from-the-editor/"],
+.wp-block-post-terms a[href*="/category/columns/"],
+.wp-block-post-terms a[href*="/category/culture/"],
+.wp-block-post-terms a[href*="/category/arts-entertainment/"] {
+	background-color: var(--wp--preset--color--primary);
+}
+
+/* Teal — government, politics, elections, civic & news */
+.wp-block-post-terms a[href*="/category/government/"],
+.wp-block-post-terms a[href*="/category/government-and-politics/"],
+.wp-block-post-terms a[href*="/category/politics/"],
+.wp-block-post-terms a[href*="/category/elections/"],
+.wp-block-post-terms a[href*="/category/local-elections/"],
+.wp-block-post-terms a[href*="/category/state-and-national-elections/"],
+.wp-block-post-terms a[href*="/category/civic-and-community-meetings/"],
+.wp-block-post-terms a[href*="/category/the-bulletin-board/"],
+.wp-block-post-terms a[href*="/category/public-meetings/"],
+.wp-block-post-terms a[href*="/category/news-roundup/"],
+.wp-block-post-terms a[href*="/category/newsletters/"] {
+	background-color: var(--wp--preset--color--primary-accent);
+}
+
+/* Hide internal-only categories */
+.wp-block-post-terms a[href*="/category/featured/"] {
+	display: none;
+}
+
+/* Hide comma separators between category pills */
+.wp-block-post-terms .wp-block-post-terms__separator {
+	display: none;
+}
+
+/* Yellow-green — community, features, lifestyle */
+.wp-block-post-terms a[href*="/category/community/"],
+.wp-block-post-terms a[href*="/category/good-neighbors/"],
+.wp-block-post-terms a[href*="/category/nonprofits/"],
+.wp-block-post-terms a[href*="/category/changemakers/"],
+.wp-block-post-terms a[href*="/category/features/"],
+.wp-block-post-terms a[href*="/category/featured/"],
+.wp-block-post-terms a[href*="/category/announcements/"],
+.wp-block-post-terms a[href*="/category/almanac/"],
+.wp-block-post-terms a[href*="/category/home-cooking/"],
+.wp-block-post-terms a[href*="/category/bites-camera-fashion/"],
+.wp-block-post-terms a[href*="/category/table-for-tara/"],
+.wp-block-post-terms a[href*="/category/adoptable-pets/"],
+.wp-block-post-terms a[href*="/category/the-scoop/"],
+.wp-block-post-terms a[href*="/category/honor-rolls/"] {
+	background-color: var(--wp--preset--color--primary-alt);
+}
+
+/* Green — environment, health, education, economy & development */
+.wp-block-post-terms a[href*="/category/environment/"],
+.wp-block-post-terms a[href*="/category/public-health-and-safety/"],
+.wp-block-post-terms a[href*="/category/wellness-watch/"],
+.wp-block-post-terms a[href*="/category/education/"],
+.wp-block-post-terms a[href*="/category/k-12-education/"],
+.wp-block-post-terms a[href*="/category/higher-education/"],
+.wp-block-post-terms a[href*="/category/schools/"],
+.wp-block-post-terms a[href*="/category/economy/"],
+.wp-block-post-terms a[href*="/category/business/"],
+.wp-block-post-terms a[href*="/category/development/"],
+.wp-block-post-terms a[href*="/category/labor/"],
+.wp-block-post-terms a[href*="/category/infrastructure/"],
+.wp-block-post-terms a[href*="/category/transportation/"],
+.wp-block-post-terms a[href*="/category/housing/"] {
+	background-color: var(--wp--preset--color--primary-alt-accent);
+}
+
+/* Purple — courts, policing, entertainment specials, gallery */
+.wp-block-post-terms a[href*="/category/courts/"],
+.wp-block-post-terms a[href*="/category/inside-courts/"],
+.wp-block-post-terms a[href*="/category/policing/"],
+.wp-block-post-terms a[href*="/category/policing-courts/"],
+.wp-block-post-terms a[href*="/category/reel-talk/"],
+.wp-block-post-terms a[href*="/category/radars-with-rachel/"],
+.wp-block-post-terms a[href*="/category/gallery/"],
+.wp-block-post-terms a[href*="/category/photo-of-the-week/"],
+.wp-block-post-terms a[href*="/category/history/"],
+.wp-block-post-terms a[href*="/category/obituaries/"],
+.wp-block-post-terms a[href*="/category/tips-for-tenants/"],
+.wp-block-post-terms a[href*="/category/republication/"] {
+	background-color: var(--wp--preset--color--brand-tertiary);
+}
+
 .is-style-term-button a {
 	padding: 6px 12px;
-	border-radius: 5px;
 	background-color: var(--wp--preset--color--tertiary);
 	font-size: var(--wp--preset--font-size--x-small);
-	color: var(--wp--preset--color--primary);
 	line-height: 1.4;
+}
+
+.is-style-term-button a:hover {
+	transform: translateY(-1px);
 }
 
 .single .taxonomy-post_tag.is-style-term-button {

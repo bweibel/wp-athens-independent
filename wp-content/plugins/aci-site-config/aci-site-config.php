@@ -77,6 +77,17 @@ add_action( 'wp_head', function () {
 }, 1 );
 
 // ---------------------------------------------------------------------------
+// Editor: hide template canvas (header/footer) when editing pages and posts.
+// ---------------------------------------------------------------------------
+
+add_filter( 'block_editor_settings_all', function ( $settings, $context ) {
+	if ( ! empty( $context->post ) && in_array( $context->post->post_type, array( 'page', 'post' ), true ) ) {
+		$settings['defaultRenderingMode'] = 'post-only';
+	}
+	return $settings;
+}, 10, 2 );
+
+// ---------------------------------------------------------------------------
 // Scoop Says CPT.
 // ---------------------------------------------------------------------------
 

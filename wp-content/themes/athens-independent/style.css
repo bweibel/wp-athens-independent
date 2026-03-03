@@ -116,6 +116,58 @@ label {
 	opacity: 0.75;
 }
 
+/* Layout
+---------------------------------------------------------------------------- */
+/*  */
+.logo-bar {
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
+	    align-items: center;
+}
+
+.logo-bar .wp-block-site-logo {
+	grid-column: 2/3;
+}
+
+.main-navigation-wrap {
+	background-color: var(--wp--preset--color--main);
+}
+
+@media (max-width: 60rem) {
+	.logo-bar {
+	display: grid;
+	grid-template-columns: 1fr;
+	    align-items: center;
+}
+.logo-bar .wp-block-site-logo {
+	grid-column: 1/-1;
+}
+}
+
+@media (max-width: 781px) {
+.main-navigation-wrap {
+    justify-content: right;
+	background-color: var(--wp--preset--color--base);
+}
+}
+
+/* Sticky header */
+
+header:has(>.is-position-sticky) {
+	position: sticky;
+	top: calc( 0px + var( --wp-admin--admin-bar--height, 0px ) );
+	z-index: 100;
+}
+
+/* Account for admin bar on mobile */
+
+@media (max-width: 600px) {
+	header:has(>.is-position-sticky) {
+		top: 0;
+	}
+}
+
+
 /* Helper styles
 ---------------------------------------------------------------------------- */
 
@@ -135,15 +187,27 @@ a.more-link {
 	position: relative;
 }
 
+.wp-block-post-terms a {
+    background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--main);
+	font-weight: 600;
+    padding: .25em .5em;
+}
 /* Adjust terms at bottom of posts */
 .single .wp-block-group .wp-block-post-terms,
 .blog .wp-block-group .wp-block-post-terms {
-	margin-bottom: -8px !important;
+	/* margin-bottom: -8px !important; */
 }
 
 /* Remove margin on term description on archive pages */
 .wp-block-term-description p:last-child {
 	margin-bottom: 0;
+}
+
+.taxonomy-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
 }
 
 /* Remove last separator on post list */
@@ -164,21 +228,6 @@ a.more-link {
 	flex-shrink: 1 !important;
 }
 
-/* Sticky header */
-
-header:has(>.is-position-sticky) {
-	position: sticky;
-	top: calc( 0px + var( --wp-admin--admin-bar--height, 0px ) );
-	z-index: 100;
-}
-
-/* Account for admin bar on mobile */
-
-@media (max-width: 600px) {
-	header:has(>.is-position-sticky) {
-		top: 0;
-	}
-}
 
 /* Mobile helper classes */
 
@@ -210,8 +259,6 @@ header:has(>.is-position-sticky) {
 
 .aci-header-utility-bar .wp-block-navigation a {
 	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	font-weight: 600;
 }
 
 /* ACI — Breaking news ticker bar
@@ -241,6 +288,7 @@ header:has(>.is-position-sticky) {
 ---------------------------------------------------------------------------- */
 .home-feature__title {
 	background-color: var(--wp--preset--color--primary);
+	max-width: 80%;
 }
 
 
@@ -308,7 +356,7 @@ header:has(>.is-position-sticky) {
 
 /* ACI — Homepage footer
 ---------------------------------------------------------------------------- */
-.scoop-says {
+/* .scoop-says {
     max-width: 300px;
     margin: 2rem auto;
 	position: relative;
@@ -321,7 +369,7 @@ header:has(>.is-position-sticky) {
     height: 120px;
     top: 80px;
     right: -130px;
-}
+} */
 
 /* ACI — 404 illustration placeholder
 ---------------------------------------------------------------------------- */
