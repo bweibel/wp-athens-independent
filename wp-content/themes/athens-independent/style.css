@@ -122,7 +122,9 @@ label {
 .logo-bar {
 	display: grid;
 	grid-template-columns: 30% 40% 30%;
-	    align-items: center;
+	align-items: center;
+	padding: var(--wp--preset--spacing--medium);
+	transition: padding 0.2s ease-in;
 }
 
 .logo-bar .wp-block-site-logo {
@@ -137,7 +139,7 @@ label {
 	.logo-bar {
 	display: grid;
 	grid-template-columns: 1fr;
-	    align-items: center;
+	align-items: center;
 }
 .logo-bar .wp-block-site-logo {
 	grid-column: 1/-1;
@@ -145,10 +147,27 @@ label {
 }
 
 @media (max-width: 781px) {
-.main-navigation-wrap {
-    justify-content: right;
-	background-color: var(--wp--preset--color--base);
+	.main-navigation-wrap {
+		justify-content: right;
+		background-color: var(--wp--preset--color--base);
+	}
+
+	.is-scrolling .logo-bar .buttons {
+		display: none;
+	}
+
+	.site-header .header-wrap {
+		display: grid;
+		grid-template-columns: 1fr 5rem;
+	}
+
+	.aci-header-utility-bar {
+		grid-column: 1/-1;
+	}
 }
+
+.top-menu {
+	gap: 0.5rem;
 }
 
 /* Sticky header */
@@ -157,6 +176,25 @@ header:has(>.is-position-sticky) {
 	position: sticky;
 	top: calc( 0px + var( --wp-admin--admin-bar--height, 0px ) );
 	z-index: 100;
+}
+
+.is-scrolling header.site-header.wp-block-template-part {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.is-scrolling .logo-bar {
+	grid-template-columns: 1fr 1fr;
+	padding-block: 0.5rem;
+}
+
+.is-scrolling .logo-bar .wp-block-site-logo {
+	grid-column: 1/2;
+}
+
+.is-scrolling .logo-bar .buttons {
+	margin: 0;
 }
 
 /* Account for admin bar on mobile */
