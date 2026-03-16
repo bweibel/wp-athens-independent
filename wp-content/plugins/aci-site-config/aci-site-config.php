@@ -165,3 +165,69 @@ add_filter( 'wp_insert_post_data', function ( $data ) {
 	}
 	return $data;
 } );
+
+// ---------------------------------------------------------------------------
+// RSS feed: add media nodes for Letterhead image embedding.
+//
+// Letterhead requires images in <media:content>, <media:thumbnail>, or
+// <enclosure>. WordPress only outputs images as <img> tags inside
+// <description> CDATA, which Letterhead ignores.
+// ---------------------------------------------------------------------------
+
+add_action( 'rss2_ns', function () {
+	echo 'xmlns:media="http://search.yahoo.com/mrss/"' . "\n";
+} );
+
+add_action( 'rss2_item', function () {
+	$post_id  = get_the_ID();
+	$thumb_id = get_post_thumbnail_id( $post_id );
+
+	if ( ! $thumb_id ) {
+		return;
+	}
+
+	$full   = wp_get_attachment_image_src( $thumb_id, 'full' );
+	$medium = wp_get_attachment_image_src( $thumb_id, 'medium_large' );
+
+	if ( ! $full ) {
+		return;
+	}
+
+	$url    = esc_url( $full[0] );
+	$width  = (int) $full[1];
+	$height = (int) $full[2];
+	$alt    = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true ) ?: get_the_title();
+	$mime   = get_post_mime_type( $thumb_id ) ?: 'image/jpeg';
+
+	// <media:content> — primary node Letterhead looks for.
+	printf(
+		'<media:content url="%s" medium="image" type="%s"%s%s>' . "\n",
+		$url,
+		esc_attr( $mime ),
+		$width  ? ' width="' . $width . '"'   : '',
+		$height ? ' height="' . $height . '"' : ''
+	);
+	printf( "\t" . '<media:title><![CDATA[%s]]></media:title>' . "\n", esc_html( $alt ) );
+	if ( $medium ) {
+		printf(
+			"\t" . '<media:thumbnail url="%s" width="%d" height="%d"/>' . "\n",
+			esc_url( $medium[0] ),
+			(int) $medium[1],
+			(int) $medium[2]
+		);
+	}
+	echo '</media:content>' . "\n";
+
+	// <enclosure> — fallback for readers that don't support the media namespace.
+	$filesize = 0;
+	$file     = get_attached_file( $thumb_id );
+	if ( $file && file_exists( $file ) ) {
+		$filesize = (int) filesize( $file );
+	}
+	printf(
+		'<enclosure url="%s" length="%d" type="%s"/>' . "\n",
+		$url,
+		$filesize,
+		esc_attr( $mime )
+	);
+} );
