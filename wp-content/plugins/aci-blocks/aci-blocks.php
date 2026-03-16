@@ -3,7 +3,7 @@
  * Plugin Name: ACI Blocks
  * Plugin URI:  https://athensindependent.com
  * Description: Custom Gutenberg blocks for Athens Independent.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Athens Independent
  * License:     GPL-2.0-or-later
  * Text Domain: aci-blocks
