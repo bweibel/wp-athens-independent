@@ -7,7 +7,7 @@ Description: Custom block theme for the Athens Independent.
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Version: 1.5.2
+Version: 1.6.2
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: athens-independent
@@ -328,6 +328,20 @@ a.more-link {
 
 }
 
+.wp-block-search.wp-block-search__button-only .wp-block-search__input {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 20rem;
+	z-index: 10;
+}
+
+.wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper {
+	position: relative;
+}
+
+/* ACI — Breaking news ticker bar
+---------------------------------------------------------------------------- */
 
 /* ACI — Homepage category section READ MORE tab
 ---------------------------------------------------------------------------- */
