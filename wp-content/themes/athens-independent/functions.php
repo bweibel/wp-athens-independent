@@ -249,3 +249,45 @@ function template_part_areas( array $areas ) {
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+
+/**
+ * Route specific categories to the no-author single post template.
+ * Uses get_post_metadata filter to return the template slug dynamically
+ * without writing to the database.
+ */
+function athensindie_no_author_template_meta( $value, $object_id, $meta_key, $single ) {
+	if ( '_wp_page_template' !== $meta_key ) {
+		return $value;
+	}
+	if ( ! is_singular( 'post' ) ) {
+		return $value;
+	}
+
+	static $in_filter = false;
+	if ( $in_filter ) {
+		return $value;
+	}
+
+	// Check if post has an explicit template already assigned (skip if so).
+	$in_filter = true;
+	$explicit  = get_post_meta( $object_id, '_wp_page_template', true );
+	$in_filter = false;
+
+	if ( $explicit && 'default' !== $explicit ) {
+		return $value;
+	}
+
+	$no_author_categories = [
+		'letters-to-the-editor',
+		'op-ed',
+		'obituaries',
+	];
+
+	if ( has_category( $no_author_categories, $object_id ) ) {
+		return $single ? 'single-no-author' : [ 'single-no-author' ];
+	}
+
+	return $value;
+}
+add_filter( 'get_post_metadata', __NAMESPACE__ . '\athensindie_no_author_template_meta', 10, 4 );
