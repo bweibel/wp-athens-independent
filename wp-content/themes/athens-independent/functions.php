@@ -29,6 +29,12 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
  */
 function enqueue_style_sheet() {
 	wp_enqueue_style( sanitize_title( __NAMESPACE__ ), get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style(
+		'athensindie-core-post-featured-image',
+		get_template_directory_uri() . '/assets/styles/core-post-featured-image.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_style_sheet' );
 
@@ -291,3 +297,28 @@ function athensindie_no_author_template_meta( $value, $object_id, $meta_key, $si
 	return $value;
 }
 add_filter( 'get_post_metadata', __NAMESPACE__ . '\athensindie_no_author_template_meta', 10, 4 );
+
+/**
+ * Append featured image caption below the featured image on single post pages.
+ */
+add_filter( 'render_block', __NAMESPACE__ . '\athensindie_featured_image_caption', 10, 2 );
+function athensindie_featured_image_caption( $block_content, $block ) {
+	if ( $block['blockName'] !== 'core/post-featured-image' ) {
+		return $block_content;
+	}
+	if ( ! is_singular( 'post' ) ) {
+		return $block_content;
+	}
+	$thumbnail_id = get_post_thumbnail_id();
+	if ( ! $thumbnail_id ) {
+		return $block_content;
+	}
+	$caption = get_post_field( 'post_excerpt', $thumbnail_id );
+	if ( empty( trim( $caption ) ) ) {
+		return $block_content;
+	}
+	$caption_html = '<figcaption class="aci-featured-image-caption">'
+		. wp_kses_post( $caption )
+		. '</figcaption>';
+	return str_replace( '</figure>', $caption_html . '</figure>', $block_content );
+}

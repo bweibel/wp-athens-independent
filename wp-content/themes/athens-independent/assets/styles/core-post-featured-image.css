@@ -1,0 +1,7 @@
+.wp-block-post-featured-image .aci-featured-image-caption {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--secondary);
+	margin-top: var(--wp--preset--spacing--x-small);
+	font-style: italic;
+	text-align: left;
+}
