@@ -7,7 +7,7 @@ Description: Custom block theme for the Athens Independent.
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Version: 1.6.2
+Version: 1.6.3
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: athens-independent
@@ -317,15 +317,46 @@ a.more-link {
 	font-size: var(--wp--preset--font-size--medium);
 	font-weight: 800;
 	text-transform: uppercase;
+	width: 100%;
+	box-sizing: border-box;
 }
 
-.aci-breaking-news a{
+.is-scrolling .aci-breaking-news {
+	display: none;
+}
+
+.aci-breaking-news a {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	margin: 0;
 	text-decoration: none;
+}
 
+@keyframes aci-ticker-scroll {
+	0%   { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 782px) {
+	.aci-breaking-news {
+		font-size: var(--wp--preset--font-size--x-small);
+		padding-block: 0.6rem;
+		grid-column: 1/-1;
+	}
+
+	.aci-breaking-news a,
+	.aci-breaking-news span {
+		display: inline-block;
+		white-space: nowrap;
+		overflow: visible;
+		text-overflow: clip;
+	}
+
+	.aci-breaking-news a.is-overflowing,
+	.aci-breaking-news span.is-overflowing {
+		animation: aci-ticker-scroll 18s linear infinite;
+	}
 }
 
 .wp-block-search.wp-block-search__button-only .wp-block-search__input {
