@@ -7,7 +7,7 @@ Description: Custom block theme for the Athens Independent.
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Version: 1.6.4
+Version: 1.6.5
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: athens-independent
@@ -159,6 +159,7 @@ label {
 	.site-header .header-wrap {
 		display: grid;
 		grid-template-columns: 1fr 5rem;
+		box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
 	}
 
 	.aci-header-utility-bar {
@@ -182,6 +183,12 @@ header:has(>.is-position-sticky) {
     position: sticky;
     top: 0;
     z-index: 100;
+    animation: header-slide-down 0.2s ease-out;
+}
+
+@keyframes header-slide-down {
+    from { transform: translateY(-100%); }
+    to   { transform: translateY(0); }
 }
 
 .is-scrolling .aci-header-utility-bar {

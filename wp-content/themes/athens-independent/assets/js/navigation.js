@@ -1,19 +1,25 @@
 (function () {
-  // Function to toggle the "is-scrolling" class on the body
+  var header = null;
+
+  function getHeaderHeight() {
+    if (!header) header = document.querySelector('header.site-header');
+    return header ? header.offsetHeight : 0;
+  }
+
   function toggleBodyClassOnScroll() {
-    // Add or remove the class based on scroll position
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > getHeaderHeight()) {
       document.body.classList.add('is-scrolling');
     } else {
       document.body.classList.remove('is-scrolling');
     }
   }
 
-  // Listen for the scroll event
   window.addEventListener('scroll', toggleBodyClassOnScroll);
 
-  // Also check on initial page load, in case the page opens at a non-zero scroll position
-  document.addEventListener('DOMContentLoaded', toggleBodyClassOnScroll);
+  document.addEventListener('DOMContentLoaded', function () {
+    header = document.querySelector('header.site-header');
+    toggleBodyClassOnScroll();
+  });
 
   // Enable ticker scroll animation only when text overflows the container
   document.addEventListener('DOMContentLoaded', function () {
