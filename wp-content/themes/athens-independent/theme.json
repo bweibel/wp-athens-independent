@@ -824,6 +824,13 @@
 	},
 	"customTemplates": [
 		{
+			"name": "single-obituary",
+			"title": "Single (Obituary)",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
 			"name": "single-legacy",
 			"title": "Single (Legacy)",
 			"postTypes": [

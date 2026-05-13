@@ -287,11 +287,14 @@ function athensindie_no_author_template_meta( $value, $object_id, $meta_key, $si
 	$no_author_categories = [
 		'letters-to-the-editor',
 		'op-ed',
-		'obituaries',
 	];
 
 	if ( has_category( $no_author_categories, $object_id ) ) {
 		return $single ? 'single-no-author' : [ 'single-no-author' ];
+	}
+
+	if ( has_category( 'obituaries', $object_id ) ) {
+		return $single ? 'single-obituary' : [ 'single-obituary' ];
 	}
 
 	return $value;
