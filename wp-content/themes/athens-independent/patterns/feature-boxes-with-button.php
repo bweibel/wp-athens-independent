@@ -104,7 +104,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><?php esc_html_e( 'Creating unique designs has never been easier. Athens Independent's growing pattern library puts expertly designed patterns at your fingertips.', 'athens-independent' ); ?></p>
+<p class="has-small-font-size"><?php esc_html_e( 'Creating unique designs has never been easier. Athens Independents growing pattern library puts expertly designed patterns at your fingertips.', 'athens-independent' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
